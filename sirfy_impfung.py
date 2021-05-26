@@ -100,13 +100,14 @@ def main():
 
 
 if __name__ == '__main__':
-    while True:
+    
+    #while True:
 
-        if test_whatsapp is True:
-            print('test whatsapp message')
-            test_twilio_message()
-        dt = datetime.datetime.now()
-        print(str(dt) + " Checking for appointments..")
-        main()
-        time.sleep(cooldown_time)
+    if test_whatsapp is True:
+        print('test whatsapp message')
+        test_twilio_message()
+    dt = datetime.datetime.now()
+    print(str(dt) + " Checking for appointments..")
+    main()
+    #time.sleep(cooldown_time)
 
