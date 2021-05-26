@@ -3,6 +3,7 @@ import os
 import json
 import urllib
 import time
+import datetime
 import mechanize
 import ssl
 from twilio.rest import Client
@@ -15,7 +16,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 skip_whatapp = False
 test_whatsapp = False
 
-cooldown_time = 15 # seconds
+cooldown_time = 60 # seconds
 
 
 def test_twilio_message():
@@ -104,7 +105,8 @@ if __name__ == '__main__':
         if test_whatsapp is True:
             print('test whatsapp message')
             test_twilio_message()
-
+        dt = datetime.datetime.now()
+        print(str(dt) + " Checking for appointments..")
         main()
         time.sleep(cooldown_time)
 
