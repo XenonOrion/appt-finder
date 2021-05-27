@@ -75,7 +75,7 @@ def main():
                 temp_dict['doc'] = termine[3]
                 temp_dict['desc'] = termine[4]
                 appt_dict.append(temp_dict)
-                print("{}: Appointment for {} on {} at {} with {}".format(datetime.now().strftime("%d/%m/%y %H:%M:%S"),
+                print("{}: Appointment for {} on {} at {} with {}".format(datetime.datetime.now().strftime("%d/%m/%y %H:%M:%S"),
                                                                     temp_dict['desc'],
                                                                     temp_dict['Date'],
                                                                     temp_dict['time'],
